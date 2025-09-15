@@ -20,7 +20,7 @@ def main():
      
     for dict_pair in list_of_pairs:
         if dict_pair["name"].isalpha():
-            print(f"{dict_pair["name"]} : {dict_pair["num"]}")
+            print(f"{dict_pair["name"]}: {dict_pair["num"]}")
     print("============= END ===============")
 
 main()
