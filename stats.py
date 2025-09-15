@@ -20,3 +20,16 @@ def char_count(content_string):
             char_count_dict[char] = 1
 
     return char_count_dict
+
+def sort_by_count_decreasing(char_count_dict):
+    #First convert the dictionary to a list of dictionaries
+    list_of_pairs = []
+    temp_dict = {}
+    for pair in char_count_dict:
+        temp_dict = {"name":pair, "num":char_count_dict[pair]}
+        list_of_pairs.append(temp_dict)
+        
+    #Then create a sorted list
+    sorted_list_of_pairs = sorted(list_of_pairs, key=lambda d: d["num"], reverse=True)
+        
+    return sorted_list_of_pairs
